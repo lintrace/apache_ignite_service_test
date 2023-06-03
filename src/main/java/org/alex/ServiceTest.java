@@ -21,7 +21,7 @@ public class ServiceTest {
         IgniteConfiguration cfg = new IgniteConfiguration();
         cfg.setClientMode(true);
         cfg.setDiscoverySpi(new TcpDiscoverySpi().setIpFinder(ipFinder));
-        //cfg.setPeerClassLoadingEnabled(true);
+        //cfg.setPeerClassLoadingEnabled(true); // must be enabled both server and client nodes
 
         Ignite ignite = Ignition.start(cfg);
 
