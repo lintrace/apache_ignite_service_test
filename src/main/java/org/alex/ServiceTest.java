@@ -26,15 +26,15 @@ public class ServiceTest {
         Ignite ignite = Ignition.start(cfg);
 
         // If you want to start service at node startup
-        // you need to add this in server node configuration:
+        // you need to add this in server node configuration and put class on nodes
         //    <property name="serviceConfiguration">
         //        <list>
         //            <bean class="org.apache.ignite.services.ServiceConfiguration">
-        //                <property name="name" value="myCounterService"/>
+        //                <property name="name" value="MyService"/>
         //                <property name="maxPerNodeCount" value="1"/>
         //                <property name="totalCount" value="1"/>
         //                <property name="service">
-        //                    <bean class="org.apache.ignite.snippets.services.MyCounterServiceImpl"/>
+        //                    <bean class="org.alex.MyService"/>
         //                </property>
         //            </bean>
         //        </list>
