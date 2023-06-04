@@ -16,7 +16,7 @@ public class ServiceTest {
         // you probably need to check these ports in the firewall settings:
         // 10800/tcp 47500/udp 47500/tcp 11211/tcp 47100/tcp
         TcpDiscoveryMulticastIpFinder ipFinder = new TcpDiscoveryMulticastIpFinder();
-        ipFinder.setAddresses(Collections.singletonList("192.168.111.3:47500"));
+        ipFinder.setAddresses(Collections.singletonList("localhost:47500"));
 
         IgniteConfiguration cfg = new IgniteConfiguration();
         cfg.setClientMode(true);
